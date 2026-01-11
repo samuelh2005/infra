@@ -7,9 +7,6 @@ services:
       - no-new-privileges:true
     networks:
       - proxy
-    # environment:
-    #   - CLOUDFLARE_EMAIL=your-email@example.com
-    #   - CLOUDFLARE_API_KEY=your-api-key
     env_file: ./traefik.env
     entrypoint: ["/entrypoint.sh"]
     ports:
