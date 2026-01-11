@@ -11,4 +11,4 @@ services:
       - "19132:19132/udp"
     volumes:
       - ./config.yml:/config/config.yml
-      - proxy-data:/server
+    restart: unless-stopped
