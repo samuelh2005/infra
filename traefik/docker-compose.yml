@@ -7,6 +7,11 @@ services:
       - no-new-privileges:true
     networks:
       - proxy
+    # environment:
+    #   - CLOUDFLARE_EMAIL=your-email@example.com
+    #   - CLOUDFLARE_API_KEY=your-api-key
+    env_file:
+      - ./traefik.env
     command:
       - "--api.insecure=false"
       - "--api.dashboard=true"
@@ -18,8 +23,10 @@ services:
       - "--entryPoints.websecure.http.tls=true"
       - "--entryPoints.web.http.redirections.entryPoint.to=websecure"
       - "--entryPoints.web.http.redirections.entryPoint.scheme=https"
-      - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
-      - "--certificatesresolvers.le.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.cf.acme.email=your-email@example.com"
+      - "--certificatesresolvers.cf.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.cf.acme.dnschallenge=true"
+      - "--certificatesresolvers.cf.acme.dnschallenge.provider=cloudflare"
     ports:
       - "80:80"
       - "8080:8080"
