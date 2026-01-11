@@ -10,8 +10,7 @@ services:
     # environment:
     #   - CLOUDFLARE_EMAIL=your-email@example.com
     #   - CLOUDFLARE_API_KEY=your-api-key
-    env_file:
-      - ./traefik.env
+    env_file: ./traefik.env
     command:
       - "--api.insecure=false"
       - "--api.dashboard=true"
