@@ -11,7 +11,7 @@ services:
     #   - CLOUDFLARE_EMAIL=your-email@example.com
     #   - CLOUDFLARE_API_KEY=your-api-key
     env_file: ./traefik.env
-    entrypoint: ["/traefik-entrypoint.sh"]
+    entrypoint: ["/entrypoint.sh"]
     ports:
       - "80:80"
       - "8080:8080"
@@ -19,7 +19,7 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./letsencrypt:/letsencrypt"
-      - "./traefik-entrypoint.sh:/traefik-entrypoint.sh:ro"
+      - "./entrypoint.sh:/entrypoint.sh:ro"
 
 networks:
   proxy:
