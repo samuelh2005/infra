@@ -1,6 +1,7 @@
-https://hangarcdn.papermc.io/plugins/ViaVersion/ViaVersion/versions/4.10.2/PAPER/ViaVersion-4.10.2.jar
-https://hangarcdn.papermc.io/plugins/ViaVersion/ViaBackwards/versions/4.10.2/PAPER/ViaBackwards-4.10.2.jar
-https://hangarcdn.papermc.io/plugins/ViaVersion/ViaRewind/versions/4.0.13/PAPER/ViaRewind-4.0.13.jar
+https://cdn.modrinth.com/data/P1OZGk5p/versions/ZPkfvn7Q/ViaVersion-5.7.1-SNAPSHOT.jar
+https://cdn.modrinth.com/data/NpvuJQoq/versions/5XJ3DGzP/ViaBackwards-5.7.1-SNAPSHOT.jar
+https://cdn.modrinth.com/data/TbHIxhx5/versions/ezTzjlZT/ViaRewind-4.0.14-SNAPSHOT.jar
 https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/velocity
 https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/velocity
 https://hangarcdn.papermc.io/plugins/turikhay/MapModCompanion/versions/0.10.0/PAPER/MapModCompanion.jar
+https://download.luckperms.net/1612/velocity/LuckPerms-Velocity-5.5.24.jar
