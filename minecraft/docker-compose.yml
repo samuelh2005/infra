@@ -12,3 +12,12 @@ services:
     volumes:
       - ./config:/config/
     restart: unless-stopped
+
+  db:
+    image: postgres
+    env_file: postgres.env
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    ports:
+      - "6432:5432"
