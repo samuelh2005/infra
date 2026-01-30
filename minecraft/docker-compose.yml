@@ -17,5 +17,18 @@ services:
     networks:
       - minecraft
 
+  lobby:
+    image: ghcr.io/miners-online/game-lobby:latest
+    container_name: lobby-1
+    env_file: lobby.env
+    environment:
+      CONFIG_PATH: /config/server.properties
+    volumes:
+      - ./schems:/schems
+      - ./lobby.properties:/config/server.properties
+    restart: unless-stopped
+    networks:
+      - minecraft
+
 networks:
   minecraft:
