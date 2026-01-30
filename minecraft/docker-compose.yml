@@ -1,4 +1,15 @@
 services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: unless-stopped
+    ports:
+      - 5672:5672
+      - 15672:15672
+    env_file: rabbitmq.env
+    networks:
+      - minecraft
+
   proxy:
     image: itzg/mc-proxy
     env_file: velocity.env

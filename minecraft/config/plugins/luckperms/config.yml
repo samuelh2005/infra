@@ -234,7 +234,7 @@ watch-files: true
 #                    configured below.
 #   => custom        Uses a messaging service provided using the LuckPerms API.
 #   => auto          Attempts to automatically setup a messaging service using redis or sql.
-messaging-service: pluginmsg
+messaging-service: rabbitmq
 
 # If LuckPerms should automatically push updates after a change has been made with a command.
 auto-push-updates: true
@@ -269,11 +269,11 @@ nats:
 # Settings for RabbitMQ.
 # Port 5672 is used by default; set address to "host:port" if differs
 rabbitmq:
-  enabled: false
+  enabled: true
   address: localhost
   vhost: '/'
-  username: 'guest'
-  password: 'guest'
+  username: '${CFG_RABBITMQ_DEFAULT_USER}'
+  password: '${CFG_RABBITMQ_DEFAULT_PASS}'
 
 
 
