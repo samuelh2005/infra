@@ -270,7 +270,7 @@ nats:
 # Port 5672 is used by default; set address to "host:port" if differs
 rabbitmq:
   enabled: true
-  address: localhost
+  address: rabbitmq
   vhost: '/'
   username: '${CFG_RABBITMQ_DEFAULT_USER}'
   password: '${CFG_RABBITMQ_DEFAULT_PASS}'
