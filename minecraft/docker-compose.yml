@@ -11,7 +11,7 @@ services:
       - minecraft
 
   proxy:
-    image: itzg/mc-proxy
+    image: itzg/mc-proxy:java25
     env_file: velocity.env
     environment:
       TYPE: VELOCITY

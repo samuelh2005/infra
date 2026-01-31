@@ -59,10 +59,11 @@ force-key-authentication = false
 	# Configure your servers here. Each key represents the server's name, and the value
 	# represents the IP address of the server to connect to.
 	lobby-1 = "lobby-1:25565"
+	lobby-0 = "10.0.0.78:25566"
 	survival = "desktop-0uc53li.netbird.cloud:35565"
 	modded-creative = "desktop-0uc53li.netbird.cloud:35566"
 	# In what order we should try servers when a player logs in or is kicked from a server.
-	try = ["lobby-1"]
+	try = ["lobby-0", "lobby-1"]
 	null = "0.0.0.0"
 [forced-hosts]
 	"null" = ["null"]
