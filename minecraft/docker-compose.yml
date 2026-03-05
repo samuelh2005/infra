@@ -9,7 +9,8 @@ services:
       PLUGINS_FILE: /config/plugins.txt
       ICON: https://github.com/miners-online/.github/blob/main/profile/logos/favicon-64x64.png?raw=true
     ports:
-      - "25565:25577"
+      - "25565:25565/tcp"
+      - "25565:25565/udp"
       - "19132:19132/udp"
     volumes:
       - ./config:/config/
