@@ -1,0 +1,11 @@
+INSERT INTO nds_trusted_domains (trusted_domain)
+SELECT '${IMS_REALM}'
+WHERE NOT EXISTS (
+    SELECT 1 FROM nds_trusted_domains WHERE trusted_domain = '${IMS_REALM}'
+);
+
+INSERT INTO s_cscf (name, s_cscf_uri)
+SELECT '${SCSCF_FQDN}', 'sip:${SCSCF_FQDN}:${SCSCF_SIP_PORT}'
+WHERE NOT EXISTS (
+    SELECT 1 FROM s_cscf WHERE name = '${SCSCF_FQDN}'
+);

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiameterPeer 
+	FQDN="${ROLE_FQDN}"
+	Realm="${IMS_REALM}"
+	Vendor_Id="10415"
+	Product_Name="CDiameterPeer"
+	AcceptUnknownPeers="1"
+	DropUnknownOnDisconnect="1"
+	Tc="30"
+	Workers="4"
+	QueueLength="8"
+	TransactionTimeout="5"
+	SessionsHashSize="128"
+	DefaultAuthSessionTimeout="3600"
+	MaxAuthSessionTimeout="3600"
+>
+	<Peer FQDN="${PCRF_FQDN}" Realm="${PCRF_REALM}" port="${DIAMETER_PEER_PORT}"/> 
+
+	<Acceptor port="${DIAMETER_PORT}" bind="${DIAMETER_BIND_IP}"/>
+
+	<Auth id="16777236" vendor="10415"/> <!-- 3GPP Rx -->
+	<Auth id="16777236" vendor="0"/> <!-- 3GPP Rx -->
+
+	<DefaultRoute FQDN="${PCRF_FQDN}" metric="10"/>
+
+</DiameterPeer>
