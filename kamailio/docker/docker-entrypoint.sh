@@ -18,6 +18,11 @@ run_kamailio() {
     : "${ROLE_FQDN:?ROLE_FQDN is required}"
     : "${IMS_REALM:?IMS_REALM is required}"
 
+    # Create runtime directories for ctl module
+    mkdir -p /var/run/kamailio_scscf
+    mkdir -p /var/run/kamailio_icscf
+    mkdir -p /var/run/kamailio_pcscf
+
     render_templates
 
     exec /usr/sbin/kamailio -DD -E -f "/etc/kamailio/${IMS_ROLE}/kamailio.cfg"

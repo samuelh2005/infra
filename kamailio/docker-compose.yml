@@ -63,6 +63,7 @@ services:
       RX_AF_SIGNALING_IP: ${RX_AF_SIGNALING_IP:-127.0.0.1}
       SBC_FQDN: ${SBC_FQDN:-sbc.ims.example.net}
       SBC_PORT: ${SBC_PORT:-5070}
+      WITH_IPSEC: ${PCSCF_WITH_IPSEC:-0}
     ports:
       - "${PCSCF_SIP_PORT:-5060}:${PCSCF_SIP_PORT:-5060}/udp"
       - "${PCSCF_SIP_PORT:-5060}:${PCSCF_SIP_PORT:-5060}/tcp"
